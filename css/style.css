@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+:root {
+    --main-color: #E3B873;
+    --main-f-color: #fff;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.title,
+.title_color {
+    max-width: 603px;
+    font-size: clamp(22px, 4vw, 40px);
+    margin: 0;
+    font-family: "Yeseva One", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: var(--main-f-color);
+}
+.subtitle {
+    font-size: 20px;
+    font-family: "Yeseva One", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: var(--main-f-color);
+    text-align: center;
+}
+.title_fz-27 {
+    font-size: 27px;
+    line-height: 1.3;
+    color: var(--main-color)
+}
+.divider {
+    width: 92px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 228px;
+    left: 295px;
+}
+.projects__title_divider:before,
+.projects__title_divider:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 46px;
+    background-color: var(--main-color);
+}
+.title_color {
+    font-size: 1em;
+    color: var(--main-color);
+}
+.projects {
+    background-color: #131313;
+    padding: 107px 134px 125px 134px;
+}
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: 442px 1fr;
+    grid-template-rows: 70px repeat(2, 239px);
+    column-gap: 50px;
+}
+.projects-menu {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    list-style-type: none;
+}
+.projects-img {
+    position: relative;
+    grid-column: 2;
+    grid-row: 2/4;
+}
+.projects-menu__link a {
+    position: relative;
+    color: #FFFFFF4D;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Yeseva One", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+.projects-menu__link a:hover {
+    color: var(--main-color);
+    transition: .7s all;
+}
+.projects-menu__link a:after {
+    content: "";
+    position: absolute;
+    margin-top: 7px;
+    left: 50%;
+    display: block;
+    height: 1px;
+    width: 0;
+    background: var(--main-color);
+    transition: .7s all;
+}
+.projects-menu__link a:hover:after {
+    width: 100%;
+    left: 0;
+}
+.projects-menu__link.active a {
+    color: var(--main-color);
+}
+.projects-menu__link.active a:after {
+    content: "";
+    position: absolute;
+    margin-top: 7px;
+    display: block;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--main-color);
+    transition: .7s all;
+}
+.projects-wrapper .descr,
+.specifications__item-descr {
+    color: var(--main-f-color);
+    width: 442px;
+    line-height: 1.9;
+    margin: 0;
+    margin-top: 9px;
+}
+.projects-wrapper .descr {
+    margin-top: 25px;
+}
+.specifications {
+    display: grid;
+    grid-template-columns: repeat(2, 213px);
+    grid-template-rows: repeat(2, minmax(100px, auto));
+}
+.specifications__item-descr {
+    opacity: 0;
+    position: absolute;
+}
+.specifications__item-descr.active {
+    opacity: 1;
+    font-size: 13px;
+}
+.title_fz-18 {
+    font-size: 18px;
+    margin: 0;
+}
+.descr_fz-13 {
+    font-size: 13px;
+    margin-top: 9px;
+    width: 134px;
+    line-height: 1.6;
+}
+.slider__arrows {
+    display: flex;
+}
+.slider__arrows img {
+    cursor: pointer;
+}
+.slider-line .image {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+.slider-line .image.active {
+    opacity: 1;
+}
+.slider__arrows_circle {
+    display: flex;
+    justify-content: space-between;
+    width: 64px;
+    align-items: center;
+    margin: 0 29px;
+}
+.slider__arrows_circle-item {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+.slider__arrows_circle-item.active,
+.slider__arrows_circle-item:hover {
+    background: var(--main-f-color);
+}
+
+
+
+@media screen and (min-width: 1700px) {
+
+    .projects-wrapper {
+        padding: 0 130px 0;
+    }
+    .divider {
+        left: 540px;
+    }
+}
+
