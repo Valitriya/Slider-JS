@@ -1,4 +1,4 @@
-        Js - slider from [https://github.com](/Valitriya/IC-Repair-Design-Project-)
+Js - slider from https://github.com/Valitriya/IC-Repair-Design-Project-
   
         Стрелки (переключают слайды по кольцу. То есть после слайда №3 снова пойдет слайд №1);
         Кружочки между стрелками (включают нужный слайд);
